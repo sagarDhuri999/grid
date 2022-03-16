@@ -1,0 +1,110 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+body{
+    
+  min-height: 100vh;
+  background-color:rgb(227, 247, 253) ;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 13px;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    line-height: 0;
+}
+
+img{
+    border-radius: 50%;
+}
+
+h2{
+    margin-block: 1rem;  /*TOP-BOTTOM   */
+}
+p{
+    line-height: 1.5rem;
+}
+.name{
+    margin-block:0.5rem;
+}
+.main {
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+     'one'
+     'two'
+     'three'
+     'four'
+     'five';
+  
+    padding-block: 2rem;    /*TOP-BOTTOM   */
+    width: min(83%, 70rem);
+    margin-inline: auto;    /*LEFT-RIGHT*/
+  }
+.testimonial {
+    font-size: 13px;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 2.5rem 3.75rem 3rem -3rem hsl( 217 19% 35%);
+  }
+  .testimonial.quote {
+    background-image: url("./images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right 10%;
+  }
+  
+  .testimonial:nth-child(1) {
+      background-color:hsl(263, 55%, 52%);
+    grid-area: one;
+    color: hsl(0, 0%, 100%);
+  }
+  .testimonial:nth-child(2) {
+      background-color: hsl(217, 19%, 35%);
+      color: hsl(0, 0%, 100%);
+    grid-area: two;
+
+  }
+  .testimonial:nth-child(3) {
+      
+    background-color:hsl(0, 0%, 100%);
+    grid-area: three;
+}
+.testimonial:nth-child(4) {
+    color: hsl(0, 0%, 100%);
+    background-color:hsl(219, 29%, 14%);
+    grid-area: four;
+  }
+  .testimonial:nth-child(5) {
+    background-color:hsl(0, 0%, 100%);
+
+    grid-area: five;
+  }
+
+
+  @media(min-width: 33em) {
+    .main {
+        grid-template-areas:
+        "one one"
+        "two three"
+        "five five"
+        "four four";
+    }
+  }
+
+  
+   @media(min-width: 75em) {
+    .main {
+        grid-template-areas:
+        "one one two five"
+        "three four four five";
+    }
+  } 
+   
+
+
